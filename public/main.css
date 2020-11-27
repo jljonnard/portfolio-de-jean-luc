@@ -1,0 +1,573 @@
+@import url("https://fonts.googleapis.com/css?family=Heebo:300,400,600");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,600,700,800");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+}
+
+body {
+    font-family: Heebo;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Roboto;
+    font-weight: 800;
+}
+
+h1 {
+    font-size: 350%;
+}
+h2 {
+    font-size: 170%;
+    color: #3f4253;
+    margin: 1%;
+}
+
+h3 {
+    color: #3f4253;
+    font-size: 200%;
+}
+h4 {
+    font-size: 140%;
+    color: #415ba5;
+    text-align: center;
+    margin-bottom: 1%;
+}
+h5 {
+    font-size: 120%;
+}
+h6 {
+    font-size: 100%;
+}
+
+@media screen and (max-width: 980px) {
+    h1 {
+        font-size: 300%;
+    }
+
+    h2 {
+        font-size: 160%;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    h1 {
+        font-size: 250%;
+    }
+
+    h2 {
+        font-size: 150%;
+    }
+
+    h4 {
+        font-size: 130%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    h1 {
+        font-size: 220%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 200%;
+    }
+
+    h2 {
+        font-size: 140%;
+    }
+
+    h4 {
+        font-size: 130%;
+    }
+}
+
+ol, ul {
+    counter-reset: element;
+}
+li {
+	list-style-type: none;
+	counter-increment: element;
+	margin-bottom: 10px;
+}
+li:before {
+	content: counter(element);
+	padding: 0 20px 6px;
+	vertical-align: middle;
+	font-weight: bold;
+    font-size: 1.1em;
+    color: #415ba5	
+}
+
+/* Screen */
+
+.only-on-small-screen {
+    display: none;
+}
+
+@media screen and (max-width: 980px) {
+    .only-on-big-screen {
+        display: none;
+    }
+
+    .only-on-small-screen {
+        display: flex;
+    }
+}
+
+/* Headers */
+
+header {
+    height: 160px;
+    z-index: 4;
+    position: relative;
+    display: flex;
+    margin: auto;
+    text-align: center;
+    color:  #FFF;
+    background-color:#415ba5;
+    font-size: 80%;
+    box-shadow: 0px 5px 5px lightgray;
+}
+
+        .alone-header {
+            align-items: center;;
+        }
+
+        .inner {
+            margin: auto;
+        }
+    
+        @media screen and (max-width: 720px) {
+            header {
+                height: 135px;
+            }
+        }
+
+        @media screen and (max-width: 650px) {
+            header {
+                height: 113px;
+                padding-left: 20%;
+                padding-right: 10%;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            header {
+                height: 93px;
+                padding-left: 25%;
+                padding-right: 5%;
+            }
+        }
+        
+/* Profil */
+
+.profil {
+    top: -32px;
+    left: -30px;
+    position: absolute;
+    filter: saturate(150%);
+    filter: brightness(110%);
+    clip-path: circle(40%);
+    width: 220px;
+    height: auto;  
+}
+
+@media screen and (max-width: 720px) {
+    .profil {
+        top: -22px;
+        left: -25px;
+        width: 180px;
+        height: auto;  
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .profil {
+        top: -18px;
+        left: -21px;
+        width: 150px;
+        height: auto;  
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .profil {
+        top: -15px;
+        left: -18px;
+        width: 125px;
+        height: auto;  
+    }
+}
+
+/* Navigation */
+
+nav {
+    width: 18vw;
+    text-align: center;
+    background-color: #FFF;
+    height: 100vh;
+    position: sticky;
+    top: 0px;
+    box-shadow: 0px 10px 10px lightgray;
+}
+
+.nav-wrapper {
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.nav-element {
+    font-weight: 700;
+    font-size: 150%;
+}
+
+.nav-element.selected {
+    color: #415ba5;
+}
+
+@media screen and (max-width: 980px) {
+    nav {
+        width: 100%;
+        height: 90vh;
+        background-color: #FFF;
+    }
+
+    .nav-header {
+        display: none;
+    }
+
+    .nav-wrapper {
+        margin: 0;
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+}
+
+/* Buttons */
+
+.button {
+    margin: 3px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    -moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    -ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    background: #415ba5;
+    color: #FFF;
+    border-radius: 200px;
+    border: solid #415ba5 2px;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 700;
+    height: 2.85em;
+    line-height: 2.95em;
+    padding: 0 1.5em;
+    width: 50%;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+    .button:hover, .button.selected {
+        color: #415ba5;
+        background: none;
+    }
+
+    .button.alt {
+        background: none;
+        border: none;
+        color:#3f4253;
+        padding: 0 0.5em;
+    }
+
+        .button.alt:hover {
+            color:#415ba5;
+        }
+
+    .button.small {
+        font-size: 0.8em;
+    }
+
+    .button.big {
+        font-size: 1.35em;
+        padding: 0 2em;
+    }
+
+    .button.fit {
+        display: block;
+        margin: 0 0 1em 0;
+        width: 100%;
+    }
+
+/* Copy */
+
+.copy {
+    color: #415ba5;
+    text-decoration: underline;
+}
+
+.copy:hover {
+    color: #3f4253;
+}
+
+/* Inputs */
+
+input[type="text"] {
+    -webkit-appearance: none;
+    outline: 0;
+    width: 100%;
+    margin: 2%;
+    padding-left: 2%;
+    height: 40px;
+    border: solid 1.5px #FFF;
+    border-radius: 20px;
+    font-size: 1.2em;
+    box-shadow: 0px 3px 5px lightgray;
+
+}
+
+    input[type="text"]:focus,
+    input[type="text"]:active {
+        border: solid 1.5px #415ba5;
+    }
+
+/* Boxes */
+
+.box {
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px lightgray;
+    margin: 1%;
+    padding: 5px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+@media screen and (max-width: 980px) {
+    .box {
+        width: 98%;
+        padding: 0;
+    }
+}
+
+.box::before {
+    opacity: 0;
+}
+
+    .box.colored {
+        background: #415ba5;
+    }
+
+    .box.fit {
+        width: 100%;
+    }
+
+    .box.small {
+        width: 25%;
+    }
+
+    .box.limit {
+        min-width: 35%;
+    }
+
+    .box.vertical {
+        display: block;
+    }
+
+    .box.inverted {
+        box-shadow: inset 0px 0px 3px lightgray;
+    }
+
+
+/* Clickable */
+
+.clickable {
+    cursor: pointer;
+}
+
+/* Wrappers */
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-bottom: lightgray 1.5px solid;
+}
+
+    .wrapper.main {
+        margin: 0;
+        align-items: flex-start;
+    }
+
+    .wrapper.title {
+        flex-wrap: wrap;
+    }
+
+.page-wrap {
+    margin-top: 1%;
+    width: 82vw;
+}
+
+    @media screen and (max-width: 980px) {
+        .page-wrap {
+            width: 100%;
+        }
+
+        .wrapper.main {
+            display: block;
+        }
+    }
+
+.coin-wrap {
+    width: 33%;
+    margin: 1%;
+    text-align: center;
+}
+
+/* Containers */
+
+.container {
+    -webkit-appearance: none;
+    display: flex;
+    justify-content: space-between;
+    flex-basis: auto;
+    flex-grow: 1;
+    margin-bottom: 1%;
+}
+
+    .container.main {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .container.vertical {
+        flex-wrap: wrap;
+    }
+
+    .container.sub {
+        display: block;
+    }
+
+    .container.left {
+        justify-content: left;
+    }
+
+    .container.right {
+        justify-content: right;
+    }
+
+    @media screen and (max-width: 1300px) {
+        .container.main {
+            margin-left: 2%;
+            margin-right: 2%;
+        }
+    }
+
+    @media screen and (max-width: 980px) {
+        .container {
+            flex-wrap: wrap;
+            align-items: center;
+        }
+    }
+
+/* Images */
+
+video {
+    margin-bottom: 1%;
+}
+
+.material-icons {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    -moz-transition: content 1.2s ease-in-out;
+    -webkit-transition: content 1.2s ease-in-out;
+    -ms-transition: content 1.2s ease-in-out;
+    transition: content 1.2s ease-in-out;
+    margin: 20%;
+    vertical-align: bottom;
+    font-size: 230%;
+}
+
+.pic {
+    margin-right: 0.9em;
+}
+
+@media screen and (max-width: 980px) {
+    .star {
+        font-size: 180%;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .star {
+        font-size: 140%;
+    }
+}
+
+/* Percentages */
+
+.contact {
+    margin-left: 35px;
+    display: flex;
+    align-items: center;
+    font-size: 108%;
+    color: #3f4253;
+    font-weight: 700;
+}
+
+/* Others */
+
+.linkedin {
+    margin-left: 8px;
+    text-decoration: none;
+    color: #415ba5;
+}
+
+.linkedin:hover {
+    color: #3f4253;
+}
+
+.code {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    -moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    -ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    font-size: 1.15em;
+    color: #FFF;
+    background-color: #415ba5;
+}
+
+    .code:hover {
+        color: #415ba5;
+        background-color: #FFF;
+    }
