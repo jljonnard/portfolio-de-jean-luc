@@ -9,13 +9,13 @@ const MainSection = () => {
             <h2 className="wrapper title">Projets Réalisés</h2>
             <div className="container">
                 <Site
-                    title="Un projet React + Redux"
+                    title="Un projet React + Redux basé classes"
                     lienSite="https://crypto-compare-eta.vercel.app/"
                     lienGithub="https://github.com/jljonnard/crypto-compare"
                     video="crypto-compare"
                 />
                 <Site
-                    title="Un projet React avec les hooks"
+                    title="Un projet React + Redux basé hooks"
                     lienSite="https://tripfindr.vercel.app/"
                     lienGithub="https://github.com/jljonnard/tripfindr"
                 />
