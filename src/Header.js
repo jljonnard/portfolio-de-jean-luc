@@ -13,7 +13,7 @@ const Header = () => {
             >
                 <img className="profil" src={profil} alt="LinkedIn"></img>
             </a>
-            <div className="inner">
+            <div className="inner oui">
                 <h1>Jean-Luc Jonnard</h1>
                 <p>Développeur passioné en recherche de missions React.js</p>
             </div>
